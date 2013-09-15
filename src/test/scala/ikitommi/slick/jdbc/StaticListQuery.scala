@@ -5,6 +5,7 @@ import scala.slick.jdbc.{ StaticQuery => Q }
 import scala.slick.session.Database
 import scala.slick.session.Database.threadLocalSession
 
+// original code in https://github.com/slick/slick-examples/blob/master/src/main/scala/com/typesafe/slick/examples/jdbc/PlainSQL.scala
 object PlainSQL extends App {
 
   case class Coffee(name: String, price: Double, sales: Int, total: Int)
@@ -50,12 +51,14 @@ object PlainSQL extends App {
       implicit val getMapResult = SLQ.getMap
       val q = Q[String, Map[String, Any]] + "select * from coffee where name = ?"
       println(q("Colombian").list)
+      // => List(Map(name -> Colombian, price -> 7.99, sales -> 0, total -> 0))
     }
 
     def queryWithImplicitMapWithTableNamesMapping() {
       implicit val getMapResult = SLQ.getMapWithTableNames
       val q = Q[String, Map[String, Any]] + "select * from coffee where name = ?"
       println(q("Colombian").list)
+      // => List(Map(coffee.name -> Colombian, coffee.price -> 7.99, coffee.sales -> 0, coffee.total -> 0))
     }
 
     queryWithImplicitMapMapping()
