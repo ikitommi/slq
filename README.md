@@ -1,7 +1,7 @@
 # SLQ
 
-StaticListQuery (SLQ) is an helper object on top of Slick for smooth and non-typesage
-data two-way databindings with Lists and Maps for plain SQL.
+StaticListQuery (SLQ) is an helper object for Slick for smooth and non-typesage
+two-way databinding using Lists and Maps for plain SQL.
 
 ## Motivation
 
