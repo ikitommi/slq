@@ -10,7 +10,7 @@ Clojure.
 ## Contains
 
 * GetResult-binding for Map[String,Any]
-* SetParameter-binding for List[Any]
+* SetParameter-binding for List[Any] (thanks to Stefan Zeiger / https://groups.google.com/d/msg/scalaquery/-aIm1N72FUE/o6iKqEfqp2YJ)
 
 ## TODO
 
