@@ -3,12 +3,12 @@ import Keys._
 
 object SbtBuild extends Build {
   val Organization = "ikitommi"
-  val Name = "SLQ"
+  val Name = "slq"
   val Version = "0.1.0-SNAPSHOT"
   val ScalaVersion = "2.10.2"
 
   lazy val project = Project (
-    "SLQ",
+    "slq",
     file("."),
     settings = Defaults.defaultSettings ++ Seq(
       organization := Organization,
